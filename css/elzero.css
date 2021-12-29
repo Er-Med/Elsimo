@@ -1457,7 +1457,7 @@ a{
 
 /* footer */
 footer{
-    padding-top: var(--main-padding);
+    padding-bottom:10px;
     background-color: #191919;
 }
 footer .container{
