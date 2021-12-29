@@ -1457,8 +1457,13 @@ a{
 
 /* footer */
 footer{
-    padding-bottom:10px;
+    padding-top: var(--main-padding);
     background-color: #191919;
+}
+@media(max-width:767px){
+    footer{
+        padding-top: 10px;
+    }
 }
 footer .container{
     display: grid;
