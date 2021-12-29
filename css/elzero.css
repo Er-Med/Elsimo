@@ -267,7 +267,6 @@ a{
     .landing{
         background-image: url('../imgs/pexels-suzy-hazelwood-1578105.jpg');
         background-size: cover;
-        background-position: center;
         background-attachment: fixed;
         height: calc(100vh - 90px);
         z-index: 1;
