@@ -119,16 +119,32 @@ a{
 }
 @media(max-width:767px){
     .header .container .logo{
-        width: 100%;
         height: 50px;
     }
 }
+
 .header .main-nav{
     display: flex;
 }
 @media(max-width:767px){
-    .header .main-nav{
-        margin: auto;
+    .header .main-nav > li:not(:last-of-type) {
+        display: none;
+    }
+    .header .main-nav > li:last-of-type >a{
+        color: #fff;
+        font-size: 1px;
+    }
+}
+.header .main-nav > li:last-of-type > a .bars{
+    color: var(--main-color);
+    font-size: 25px;
+    display: none;
+}
+@media(max-width:767px){
+    .header .main-nav > li:last-of-type > a .bars{
+        display: block;
+        color: var(--main-color);
+        font-size: 25px;
     }
 }
 .header .main-nav > li > a{
@@ -247,6 +263,16 @@ a{
 .landing{
     position: relative;
 }
+@media(max-width:767px){
+    .landing{
+        background-image: url('../imgs/pexels-suzy-hazelwood-1578105.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        height: calc(100vh - 90px);
+        z-index: 1;
+    }
+}
 .landing::before{
     content: "";
     position: absolute;
@@ -257,9 +283,17 @@ a{
     background: #eee;
     z-index: -1;
     transform: skewY(-6deg);
-        transform-origin: top left;
+    transform-origin: top left;
+}
+@media(max-width:767px){
+    .landing::before{
+        top: 0;
+        transform: none;
+        background-color: #9dbdf275;
+
     }
-    .landing .container{
+}
+.landing .container{
     min-height: calc(100vh - 72px);
     display: flex;
     align-items: center;
@@ -280,7 +314,10 @@ a{
 }
 @media (max-width: 767px) {
     .landing .box h1 {
-        font-size: 28px;
+    font-size: 35px;
+    letter-spacing: .5px;
+    color: #fff;
+    text-shadow: 3px 4px 4px black;
     }
 }
 .landing .box p {
@@ -293,6 +330,8 @@ a{
 @media (max-width: 991px) {
     .landing .box p {
         margin: 10px auto;
+        text-shadow: 3px 4px 4px black;
+        color: #fff;
     }
 }
 @media (max-width: 767px) {
