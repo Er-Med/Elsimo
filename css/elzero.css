@@ -91,8 +91,23 @@ a{
 }
 .main-title:hover::after{
     animation: right-move 0.5s linear forwards;
-} 
-
+}
+/* scrollbar style */
+::-webkit-scrollbar{
+    width: 15px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #0ca3e99e;
+    border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color:#03a9f4;
+}
+::-webkit-scrollbar-track{
+    background-color: #bfebff9e;
+    box-shadow:0 0 10px #b5abab inset;
+}
+/* end scrollbar style */
 /* header */
 .header{
     position: relative;
